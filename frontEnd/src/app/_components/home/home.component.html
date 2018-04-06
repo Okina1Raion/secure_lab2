@@ -1,0 +1,9 @@
+<div class="depth-1 depth-hover panel text-center">
+    <h2> Welcome!</h2> <br/>
+    <a *ngIf="currentUser!=null" class="btn btn-success btn-lg" href="/user/{{currentUser.Id}}">Go to profile!</a>
+    <a *ngIf="currentUser==null" class="btn btn-default btn-lg" href="/auth">Log In</a>
+    <span *ngIf="currentUser==null" style="font-size: 150%">or </span>
+    <a *ngIf="currentUser==null" class="btn btn-success btn-lg" href="/registration">Sign Up</a>
+    <br/>
+    <br/>
+</div>

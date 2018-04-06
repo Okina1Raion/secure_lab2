@@ -1,0 +1,20 @@
+<nav class="navbar navbar-fixed-top panel">
+    <div class="container-fluid depth-hover-lite">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">HelloWorld!</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li *ngIf="currentUser==null"><button type="button" (click)="goTo('auth')" class="btn btn-default navbar-btn">Log In</button></li>
+                <li *ngIf="currentUser==null"><button type="button" (click)="goTo('registration')" class="btn btn-info navbar-btn">Sign up</button></li>
+                <li *ngIf="currentUser!=null"><a href="/user/{{currentUser.Id}}">Hello, {{currentUser.Name}}</a></li>
+                <li *ngIf="currentUser!=null"><button type="button" (click)="logOut()" class="btn btn-link navbar-btn">Log Out</button></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<br/>
+<br/>
+<router-outlet></router-outlet>
